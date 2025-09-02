@@ -41,15 +41,15 @@ A React + TypeScript application that lets users browse, search, and view detail
 ## 📸 Screenshots
 
 ### Main Spell List
-![Main Spell List](./screenshots/spell-list.png)
+![Main Spell List](https://raw.githubusercontent.com/Hachimankira/dnd-spells/refs/heads/master/public/screenshots/spell-list.png)
 *Browse all available D&D 5e spells with search functionality*
 
 ### Spell Details
-![Spell Detail Page](./screenshots/spell-detail.png)
+![Spell Detail Page](https://raw.githubusercontent.com/Hachimankira/dnd-spells/refs/heads/master/public/screenshots/spell-detail.png)
 *Detailed view showing all spell information and casting requirements*
 
 ### Favorites
-![Favorites View](./screenshots/favorites.png)
+![Favorites View](https://raw.githubusercontent.com/Hachimankira/dnd-spells/refs/heads/master/public/screenshots/favorites.png)
 *Save and manage your favorite spells*
 ---
 
