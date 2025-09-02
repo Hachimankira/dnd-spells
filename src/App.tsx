@@ -1,12 +1,17 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css'
+import SpellList from './pages/SpellList';
+import SpellDetailPage from './pages/SpellDetail';
 
 function App() {
 
   return (
-      <div>
-        <h1 className="text-4xl font-bold">Welcome to DnD Spells</h1>
-      </div>
-  )
+    <Routes>
+      <Route path="/" element={<SpellList />} />
+      <Route path="/spell/:index" element={<SpellDetailPage />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
+
