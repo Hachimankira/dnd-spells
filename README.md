@@ -1,69 +1,91 @@
-# React + TypeScript + Vite
+# D&D 5e Spells App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript application that lets users browse, search, and view details about Dungeons & Dragons 5th edition spells. Users can also save their favorite spells locally.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup Instructions
 
-## Expanding the ESLint configuration
+1. Clone this repository:
+   ```bash
+   git clone git@github.com:Hachimankira/dnd-spells.git
+   cd dnd-spells
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+4. Open your browser at:
+   ```
+   http://localhost:5173
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📖 Features
+
+* View a list of all available spells.
+* Search and filter spells by name.
+* View detailed spell information (casting time, range, components, duration, description, higher-level effects, and classes).
+* Save and view favorite spells (persisted locally in `localStorage`).
+
+---
+
+## 📸 Screenshots
+
+### Main Spell List
+![Main Spell List](./screenshots/spell-list.png)
+*Browse all available D&D 5e spells with search functionality*
+
+### Spell Details
+![Spell Detail Page](./screenshots/spell-detail.png)
+*Detailed view showing all spell information and casting requirements*
+
+### Favorites
+![Favorites View](./screenshots/favorites.png)
+*Save and manage your favorite spells*
+---
+
+## 📚 References
+
+* **API Documentation:** [5e Spells API Docs](https://5e-bits.github.io/docs/tutorials)
+* **Design Inspiration:** [Official D&D Spellbook Cards](https://dnd.gf9games.com/gameAcc/tabid/87/entryid/126/spellbook-cards-druid-73917.aspx)
+
+---
+
+## ⚠️ Known Limitations / Assumptions
+
+* Favorites are stored in `localStorage` and are not synced across devices.
+* Basic search is limited to spell names only (no advanced filtering).
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** React 18+ with TypeScript
+* **Styling:** Tailwind CSS
+* **Icons:** Lucide React
+* **API:** D&D 5e API (dnd5eapi.co)
+* **Build Tool:** Vite
+* **Storage:** Browser local storage for favorites
+
+---
+
+## 📂 Project Structure
+
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+src/
+├── components/          # React components
+├── hooks/               # Custom React hooks
+├── types/               # TypeScript type definitions
+├── pages/               # Pages rendered from app.tsx
+├── App.tsx              # Main application component
+└── main.tsx             # Application entry point
 ```
